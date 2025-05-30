@@ -57,14 +57,14 @@ h1 {
 
 .menu-item-content h3 {
   margin: 0;
-  font-size: 20px;
+  font-size: 30px;
   color: #333;
 }
 
 .menu-item-content p {
   margin: 5px 0 0;
   color: #777;
-  font-size: 16px;
+  font-size: 25px;
 }
 
 .navigasi-cepat {
@@ -85,7 +85,7 @@ h1 {
 }
 
 /* Responsif untuk HP */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .menu-item {
     flex-direction: row;
     align-items: center;
