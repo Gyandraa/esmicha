@@ -115,16 +115,16 @@ h1 {
   }
 
   .menu-gambar {
-    width: 135px;
-    height: 135px;
+    width: 155px;
+    height: 155px;
     margin-right: 18px;
   }
 
   .menu-item-content h3 {
-    font-size: 19px;
+    font-size: 22px;
   }
 
   .menu-item-content p {
-    font-size: 15px;
+    font-size: 19px;
   }
 }
