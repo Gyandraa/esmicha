@@ -53,11 +53,6 @@ const minuman = [
     gambar: "images/escappucino.jpg",
   },
   {
-    nama: "Es Classic Kecil Dan Besar",
-    harga: "Rp 8.000 - 10.000",
-    gambar: "images/esclassic.jpg",
-  },
-  {
     nama: "Es Coconut Blue Soda Kecil Dan Besar",
     harga: "Rp 8.000 - 10.000",
     gambar: "images/escoconutblue.jpg",
@@ -176,11 +171,6 @@ const minuman = [
     nama: "Es Strawberry Macha Latte Kecil Dan Besar",
     harga: "Rp 8.000 - 10.000",
     gambar: "images/esstrawberrymachalatte.jpg",
-  },
-  {
-    nama: "Es Strawberry Latte Matcha",
-    harga: "Rp 8.000",
-    gambar: "images/esstrawberrylattemacha.jpg",
   },
   {
     nama: "Es Strawberry Yakult Kecil Dan Besar",
