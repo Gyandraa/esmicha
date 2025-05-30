@@ -30,7 +30,7 @@ h1 {
   background: #fffdfb;
   margin-bottom: 15px;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
   transition: transform 0.2s ease;
@@ -42,8 +42,8 @@ h1 {
 }
 
 .menu-gambar {
-  width: 145px;
-  height: 145px;
+  width: 130px;
+  height: 150px;
   object-fit: cover;
   margin-right: 20px;
   border-radius: 12px;
