@@ -42,8 +42,8 @@ h1 {
 }
 
 .menu-gambar {
-  width: 130px;
-  height: 150px;
+  width: 150px;
+  height: 170px;
   object-fit: cover;
   margin-right: 20px;
   border-radius: 12px;
@@ -57,14 +57,14 @@ h1 {
 
 .menu-item-content h3 {
   margin: 0;
-  font-size: 30px;
+  font-size: 40px;
   color: #333;
 }
 
 .menu-item-content p {
   margin: 5px 0 0;
   color: #777;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .navigasi-cepat {
