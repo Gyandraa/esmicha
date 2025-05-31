@@ -118,6 +118,7 @@ const minuman = [
     gambar: "images/esmilkyakult.jpg",
   },
   {
+    keterangan: "New Menu",
     nama: "Es Moca Latte coffee",
     harga: "Rp 8.000",
     gambar: "images/esmocalatekopi.jpg",
@@ -158,6 +159,7 @@ const minuman = [
     gambar: "images/essusu.jpg",
   },
   {
+    keterangan: "New Menu",
     nama: "Es Soda Gembira",
     harga: "Rp 8.000",
     gambar: "images/essodagembira.jpg",
@@ -193,6 +195,7 @@ const minuman = [
     gambar: "images/esteller.jpg",
   },
   {
+    keterangan: "New Menu",
     nama: "Es Vanilla Latte Coffee",
     harga: "Rp 8.000 - 10.000",
     gambar: "images/esvanillalattecoffee.jpg",
@@ -212,6 +215,7 @@ function tampilkanMenu(menu, targetId) {
     div.innerHTML = `
       <img src="${item.gambar}" alt="${item.nama}" class="menu-gambar" />
       <div class="menu-info">
+      ${item.keterangan ? `<span class="keterangan">${item.keterangan}</span>` : ""}
         <h3>${item.nama}</h3>
         <p>${item.harga}</p>
       </div>
