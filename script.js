@@ -206,6 +206,20 @@ const minuman = [
     gambar: "images/esgreentea.jpg",
   },
 ];
+const menubaru = [
+  {
+    keterangan: "New Menu",
+    nama: "Es Soda Gembira",
+    harga: "Rp 8.000",
+    gambar: "images/essodagembira.jpg",
+  },
+  {
+    keterangan: "New Menu",
+    nama: "Es Vanilla Latte Coffee",
+    harga: "Rp 8.000 - 10.000",
+    gambar: "images/esvanillalattecoffee.jpg",
+  },
+];
 
 function tampilkanMenu(menu, targetId) {
   const container = document.getElementById(targetId);
