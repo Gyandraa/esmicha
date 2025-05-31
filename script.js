@@ -118,7 +118,7 @@ const minuman = [
     gambar: "images/esmilkyakult.jpg",
   },
   {
-    keterangan: "New Menu",
+    keterangan: "🆕New Menu",
     nama: "Es Moca Latte coffee",
     harga: "Rp 8.000",
     gambar: "images/esmocalatekopi.jpg",
