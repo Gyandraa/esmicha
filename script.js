@@ -220,8 +220,8 @@ function tampilkanMenu(menu, targetId) {
           ? `<span class="keterangan">${item.keterangan}</span>`
           : ""
       }
-        <h3>${item.nama}</h3>
-        <p>${item.harga}</p>
+        <h2>${item.nama}</h2>
+        <h3>${item.harga}</h3>
       </div>
     `;
     container.appendChild(div);
