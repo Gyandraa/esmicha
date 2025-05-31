@@ -149,6 +149,12 @@ const minuman = [
     gambar: "images/esorangeyakult.jpg",
   },
   {
+    keterangan: "🆕New Menu",
+    nama: "Es Soda Gembira",
+    harga: "Rp 8.000",
+    gambar: "images/essodagembira.jpg",
+  },
+  {
     nama: "Es Soda Sirsak Kecil Dan besar",
     harga: "Rp 6.000 - 8.000",
     gambar: "images/esmozitosirsak.jpg",
@@ -157,12 +163,6 @@ const minuman = [
     nama: "Es Susu Kecil Dan Besar",
     harga: "Rp 7.000 - 10.000",
     gambar: "images/essusu.jpg",
-  }, 
-  {
-    keterangan: "🆕New Menu",
-    nama: "Es Soda Gembira",
-    harga: "Rp 8.000",
-    gambar: "images/essodagembira.jpg",
   },
   {
     nama: "Es Strawberry Milkshake",
@@ -215,7 +215,11 @@ function tampilkanMenu(menu, targetId) {
     div.innerHTML = `
       <img src="${item.gambar}" alt="${item.nama}" class="menu-gambar" />
       <div class="menu-info">
-      <h4>${item.keterangan ? `<span class="keterangan">${item.keterangan}</span>` : ""}
+      <h4>${
+        item.keterangan
+          ? `<span class="keterangan">${item.keterangan}</span>`
+          : ""
+      }
         <h3>${item.nama}</h3>
         <p>${item.harga}</p>
       </div>
