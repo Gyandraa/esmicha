@@ -157,9 +157,9 @@ const minuman = [
     nama: "Es Susu Kecil Dan Besar",
     harga: "Rp 7.000 - 10.000",
     gambar: "images/essusu.jpg",
-  },
+  }, 
   {
-    keterangan: "New Menu",
+    keterangan: "🆕New Menu",
     nama: "Es Soda Gembira",
     harga: "Rp 8.000",
     gambar: "images/essodagembira.jpg",
@@ -195,7 +195,7 @@ const minuman = [
     gambar: "images/esteller.jpg",
   },
   {
-    keterangan: "New Menu",
+    keterangan: "🆕New Menu",
     nama: "Es Vanilla Latte Coffee",
     harga: "Rp 8.000 - 10.000",
     gambar: "images/esvanillalattecoffee.jpg",
@@ -204,20 +204,6 @@ const minuman = [
     nama: "Green Tea/Matcha Kecil Dan Besar",
     harga: "Rp 8 .000 - 10.000",
     gambar: "images/esgreentea.jpg",
-  },
-];
-const menubaru = [
-  {
-    keterangan: "New Menu",
-    nama: "Es Soda Gembira",
-    harga: "Rp 8.000",
-    gambar: "images/essodagembira.jpg",
-  },
-  {
-    keterangan: "New Menu",
-    nama: "Es Vanilla Latte Coffee",
-    harga: "Rp 8.000 - 10.000",
-    gambar: "images/esvanillalattecoffee.jpg",
   },
 ];
 
@@ -229,7 +215,7 @@ function tampilkanMenu(menu, targetId) {
     div.innerHTML = `
       <img src="${item.gambar}" alt="${item.nama}" class="menu-gambar" />
       <div class="menu-info">
-      ${item.keterangan ? `<span class="keterangan">${item.keterangan}</span>` : ""}
+      <h4>${item.keterangan ? `<span class="keterangan">${item.keterangan}</span>` : ""}
         <h3>${item.nama}</h3>
         <p>${item.harga}</p>
       </div>
