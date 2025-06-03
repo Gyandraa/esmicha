@@ -215,7 +215,7 @@ function tampilkanMenu(menu, targetId) {
     div.innerHTML = `
       <img src="${item.gambar}" alt="${item.nama}" class="menu-gambar" />
       <div class="menu-info">
-      <h4>${
+      ${
         item.keterangan
           ? `<span class="keterangan">${item.keterangan}</span>`
           : ""
