@@ -234,9 +234,9 @@ function tampilkanMenu(menu, targetId) {
         }
         <h2>${item.nama}</h2>
         <h3>${item.harga}</h3>
-        <button onclick="tambahKeKeranjang('${item.nama}', '${
+        <button onclick="tambahKeKeranjang('<h2>${item.nama}</h2>', '${
       item.harga
-    }')"><h2>Order</h2></button>
+    }')"><h2>Order Here</h2></button>
       </div>
     `;
     container.appendChild(div);
