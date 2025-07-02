@@ -207,6 +207,14 @@ const minuman = [
   },
 ];
 
+let keranjang = [];
+
+function parseHarga(hargaStr) {
+  const match = hargaStr.match(/\d+/g);
+  if (!match) return 0;
+  return parseInt(match[0] + (match[1] || "")); // Ambil harga pertama
+}
+
 function tampilkanMenu(menu, targetId) {
   const container = document.getElementById(targetId);
   menu.forEach((item) => {
@@ -222,6 +230,9 @@ function tampilkanMenu(menu, targetId) {
       }
         <h2>${item.nama}</h2>
         <h3>${item.harga}</h3>
+         <button onclick="tambahKeKeranjang('${item.nama}', '${
+      item.harga
+    }')">Tambah</button>
       </div>
     `;
     container.appendChild(div);
@@ -230,3 +241,53 @@ function tampilkanMenu(menu, targetId) {
 
 tampilkanMenu(makanan, "makanan");
 tampilkanMenu(minuman, "minuman");
+
+function tambahKeKeranjang(nama, harga) {
+  const hargaAngka = parseHarga(harga);
+  keranjang.push({ nama, harga: hargaAngka });
+  tampilkanKeranjang();
+}
+
+function tampilkanKeranjang() {
+  const keranjangContainer = document.getElementById("keranjangContainer");
+  const ul = document.getElementById("keranjang");
+  ul.innerHTML = "";
+  let total = 0;
+
+  if (keranjang.length === 0) {
+    keranjangContainer.style.display = "none";
+    return;
+  } else {
+    keranjangContainer.style.display = "block";
+  }
+
+  keranjang.forEach((item, index) => {
+    total += item.harga;
+    const li = document.createElement("li");
+    li.className = "keranjang-item";
+    li.innerHTML = `
+      <span>${item.nama} - Rp ${item.harga.toLocaleString()}</span>
+      <button onclick="hapusItem(${index})">×</button>
+    `;
+    ul.appendChild(li);
+  });
+  document.getElementById(
+    "totalHarga"
+  ).textContent = `Total: Rp ${total.toLocaleString()}`;
+}
+
+function hapusItem(index) {
+  keranjang.splice(index, 1);
+  tampilkanKeranjang();
+}
+function kirimKeWA() {
+  let pesan = "Halo, saya ingin pesan:%0A";
+  keranjang.forEach((item) => {
+    pesan += `- ${item.nama} (Rp ${item.harga.toLocaleString()})%0A`;
+  });
+  const total = keranjang.reduce((acc, item) => acc + item.harga, 0);
+  pesan += `%0ATotal: Rp ${total.toLocaleString()}`;
+
+  const noTujuan = "6282266661582";
+  window.open(`https://wa.me/6282266661582?text=${pesan}`, "_blank");
+}
