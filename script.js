@@ -267,7 +267,7 @@ function updateKeranjangView() {
       li.className = "keranjang-item";
       li.innerHTML = `
         <span>${item.nama} - Rp ${item.harga.toLocaleString()}</span>
-        <button onclick="hapusItem(${index})">×</button>
+        <button onclick="hapusItem(${index})"><p>×</p></button>
       `;
       ul.appendChild(li);
     });
