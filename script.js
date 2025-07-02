@@ -236,7 +236,7 @@ function tampilkanMenu(menu, targetId) {
         <h3>${item.harga}</h3>
         <button onclick="tambahKeKeranjang('${item.nama}', '${
       item.harga
-    }')">Tambah</button>
+    }')"><h2>Order</h2></button>
       </div>
     `;
     container.appendChild(div);
