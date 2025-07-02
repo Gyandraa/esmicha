@@ -249,18 +249,9 @@ function tambahKeKeranjang(nama, harga) {
 }
 
 function tampilkanKeranjang() {
-  const keranjangContainer = document.getElementById("keranjangContainer");
   const ul = document.getElementById("keranjang");
   ul.innerHTML = "";
   let total = 0;
-
-  if (keranjang.length === 0) {
-    keranjangContainer.style.display = "none";
-    return;
-  } else {
-    keranjangContainer.style.display = "block";
-  }
-
   keranjang.forEach((item, index) => {
     total += item.harga;
     const li = document.createElement("li");
@@ -280,6 +271,7 @@ function hapusItem(index) {
   keranjang.splice(index, 1);
   tampilkanKeranjang();
 }
+
 function kirimKeWA() {
   let pesan = "Halo, saya ingin pesan:%0A";
   keranjang.forEach((item) => {
