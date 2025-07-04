@@ -209,17 +209,15 @@ const minuman = [
 
 let keranjang = [];
 
-// Fungsi untuk mem-parse harga dari string ke angka
 function parseHarga(hargaStr) {
   const match = hargaStr.match(/\d+/g);
   if (!match) return 0;
   return parseInt(match[0] + (match[1] || ""));
 }
 
-// Fungsi untuk menampilkan menu
 function tampilkanMenu(menu, targetId) {
   const container = document.getElementById(targetId);
-  container.innerHTML = ""; // Kosongkan container terlebih dahulu
+  container.innerHTML = "";
 
   menu.forEach((item) => {
     const div = document.createElement("div");
@@ -234,7 +232,7 @@ function tampilkanMenu(menu, targetId) {
         }
         <h2>${item.nama}</h2>
         <h3>${item.harga}</h3>
-        <button onclick="tambahKeKeranjang('<h2>${item.nama}</h2>', '${
+        <button onclick="tambahKeKeranjang('${item.nama}', '${
       item.harga
     }')"><h2>Order Here</h2></button>
       </div>
@@ -243,24 +241,20 @@ function tampilkanMenu(menu, targetId) {
   });
 }
 
-// Fungsi untuk mengupdate tampilan keranjang
 function updateKeranjangView() {
   const keranjangContainer = document.getElementById("keranjang-container");
   const ul = document.getElementById("keranjang");
   const totalElement = document.getElementById("totalHarga");
 
-  ul.innerHTML = ""; // Kosongkan list terlebih dahulu
+  ul.innerHTML = "";
   let total = 0;
 
   if (keranjang.length === 0) {
-    // Jika keranjang kosong
     keranjangContainer.style.display = "none";
     totalElement.textContent = "";
   } else {
-    // Jika ada item di keranjang
     keranjangContainer.style.display = "block";
 
-    // Tambahkan semua item ke dalam list
     keranjang.forEach((item, index) => {
       total += item.harga;
       const li = document.createElement("li");
@@ -272,39 +266,32 @@ function updateKeranjangView() {
       ul.appendChild(li);
     });
 
-    // Update total harga
     totalElement.textContent = `Total: Rp ${total.toLocaleString()}`;
   }
 }
 
-// Fungsi untuk menambah item ke keranjang
 function tambahKeKeranjang(nama, harga) {
   const hargaAngka = parseHarga(harga);
   keranjang.push({ nama, harga: hargaAngka });
   updateKeranjangView();
 }
 
-// Fungsi untuk menghapus item dari keranjang
 function hapusItem(index) {
   keranjang.splice(index, 1);
   updateKeranjangView();
 }
 
-// Inisialisasi saat halaman dimuat
 document.addEventListener("DOMContentLoaded", function () {
-  // Kosongkan keranjang saat pertama kali load
   keranjang = [];
 
-  // Tampilkan menu
   tampilkanMenu(makanan, "makanan");
   tampilkanMenu(minuman, "minuman");
 
-  // Update tampilan keranjang
   updateKeranjangView();
 });
 
 function kirimKeWA() {
-  let pesan = "Halo, saya ingin pesan:%0A";
+  let pesan = "Halo Pa/Ibu, saya ingin pesan:%0A";
   keranjang.forEach((item) => {
     pesan += `- ${item.nama} (Rp ${item.harga.toLocaleString()})%0A`;
   });
