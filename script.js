@@ -4,10 +4,23 @@ const makanan = [
     harga: "Rp 15.000",
     gambar: "images/nasiayamkatsu.jpg",
   },
+
   {
     nama: "Ayam Katsu (Tanpa Nasi)",
     harga: "Rp 10.000",
     gambar: "images/nasiayamkatsu.jpg",
+  },
+  {
+    keterangan: "🆕New Menu",
+    nama: "Nasi chicken wings",
+    harga: "Rp 15.000",
+    gambar: "images/chickenwings.jpg",
+  },
+  {
+    keterangan: "🆕New Menu",
+    nama: "chicken wings (Tanpa Nasi)",
+    harga: "Rp 10.000",
+    gambar: "images/chickenwings.jpg",
   },
   {
     nama: "Nasi Ayam Suir",
