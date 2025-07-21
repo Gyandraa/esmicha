@@ -19,6 +19,14 @@ a {
   font-family: "Times New Roman", Times, serif;
 }
 
+.kontak {
+  color: rgb(185, 41, 41);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.kontak-section {
+  font-size: 40px;
+}
+
 a:hover {
   color: #ff6600;
 }
