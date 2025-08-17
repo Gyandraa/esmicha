@@ -1,5 +1,11 @@
 const makanan = [
   {
+    keterangan: "🆕New Menu",
+    nama: "Nasi Ayam Penyet",
+    harga: "Rp 17.500",
+    gambar: "images/ayam-penyet.jpg",
+  },
+  {
     nama: "Nasi Ayam Katsu ",
     harga: "Rp 15.000",
     gambar: "images/nasiayamkatsu.jpg",
@@ -18,7 +24,7 @@ const makanan = [
   },
   {
     keterangan: "🆕New Menu",
-    nama: "chicken wings (Tanpa Nasi)",
+    nama: " chicken wings (Tanpa Nasi)",
     harga: "Rp 10.000",
     gambar: "images/chickenwings.jpg",
   },
@@ -311,6 +317,5 @@ function kirimKeWA() {
   const total = keranjang.reduce((acc, item) => acc + item.harga, 0);
   pesan += `%0ATotal: Rp ${total.toLocaleString()}`;
 
-  const noTujuan = "6282266661582";
   window.open(`https://wa.me/6282266661582?text=${pesan}`, "_blank");
 }
