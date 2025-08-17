@@ -228,6 +228,15 @@ const minuman = [
 
 let keranjang = [];
 
+function saveKeranjang() {
+  localStorage.setItem("keranjang", JSON.stringify(keranjang));
+}
+
+function loadKeranjang() {
+  const data = localStorage.getItem("keranjang");
+  keranjang = data ? JSON.parse(data) : [];
+}
+
 function parseHarga(hargaStr) {
   const match = hargaStr.match(/\d+/g);
   if (!match) return 0;
@@ -251,9 +260,9 @@ function tampilkanMenu(menu, targetId) {
         }
         <h2>${item.nama}</h2>
         <h3>${item.harga}</h3>
-        <button onclick="tambahKeKeranjang('${item.nama}', '${
-      item.harga
-    }')"><h2>Order Here</h2></button>
+        <button onclick="tambahKeKeranjang('${item.nama}', '${item.harga}')">
+          <h2>Order Here</h2>
+        </button>
       </div>
     `;
     container.appendChild(div);
@@ -292,19 +301,28 @@ function updateKeranjangView() {
 function tambahKeKeranjang(nama, harga) {
   const hargaAngka = parseHarga(harga);
   keranjang.push({ nama, harga: hargaAngka });
+  saveKeranjang();
   updateKeranjangView();
 }
 
 function hapusItem(index) {
   keranjang.splice(index, 1);
+  saveKeranjang();
   updateKeranjangView();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  keranjang = [];
+  loadKeranjang();
 
-  tampilkanMenu(makanan, "makanan");
+  const makananContainer = document.getElementById("makanan");
+  if (makananContainer) {
+    tampilkanMenu(makanan, "makanan");
+  }
 
+  const minumanContainer = document.getElementById("minuman");
+  if (minumanContainer) {
+    tampilkanMenu(minuman, "minuman");
+  }
   updateKeranjangView();
 });
 

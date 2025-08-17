@@ -15,13 +15,17 @@
       <a href="index.html">🍽️ Makanan</a> |
       <a href="minuman.html">🍹 Minuman</a>
     </nav>
-    <div id="minuman"></div>
+
+    <div class="menu-section" id="minuman">
+      <div class="gatau"><h2>🍹Minuman</h2></div>
+    </div>
     <div id="keranjang-container">
       <h2>Keranjang</h2>
       <ul id="keranjang"></ul>
-      <p id="totalHarga"></p>
+      <p id="totalHarga">Total: Rp 0</p>
       <button onclick="kirimKeWA()">Kirim ke WA</button>
     </div>
+
     <script src="script.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
