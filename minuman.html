@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu Esmicha</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/logoesmicha.jpg" />
   </head>
   <body>
     <h1>Menu Esmicha</h1>
@@ -12,24 +12,22 @@
       <p>Jika ingin pesan bisa langsung klick order</p>
       <p>jika ingin order bisa menghubungi nomor dibawah ini</p>
       <p class="kontak">082266661582</p>
-      <a href="#makanan">🍽️ Makanan</a> | <a href="minuman.html">🍹 Minuman</a>
+      <a href="index.html">🍽️ Makanan</a> |
+      <a href="minuman.html">🍹 Minuman</a>
     </nav>
-
-    <div class="menu-section" id="makanan">
-      <div class="gatau"><h2>🍽️Makanan</h2></div>
-    </div>
-
-    <div class="menu-section" id="minuman">
-      <div class="gatau"><h2></h2></div>
-    </div>
-
+    <div id="minuman"></div>
     <div id="keranjang-container">
       <h2>Keranjang</h2>
       <ul id="keranjang"></ul>
-      <p id="totalHarga">Total: Rp 0</p>
-      <button onclick="kirimKeWA()"><h2>Kirim ke WhatsApp</h2></button>
+      <p id="totalHarga"></p>
+      <button onclick="kirimKeWA()">Kirim ke WA</button>
     </div>
-
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        tampilkanMenu(minuman, "minuman");
+        updateKeranjangView();
+      });
+    </script>
   </body>
 </html>

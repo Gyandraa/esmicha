@@ -304,7 +304,6 @@ document.addEventListener("DOMContentLoaded", function () {
   keranjang = [];
 
   tampilkanMenu(makanan, "makanan");
-  tampilkanMenu(minuman, "minuman");
 
   updateKeranjangView();
 });

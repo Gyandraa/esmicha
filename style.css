@@ -21,7 +21,7 @@ a {
 
 .kontak {
   color: rgb(185, 41, 41);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .kontak-section {
   font-size: 40px;
@@ -64,9 +64,9 @@ h3 {
 }
 
 p {
-  font-family: "Segoe UI", sans-serif;
   font-size: 30px;
-  color: #3a3333;
+  color: #1b1919;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .menu-section {
