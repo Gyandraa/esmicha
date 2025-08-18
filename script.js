@@ -319,10 +319,6 @@ document.addEventListener("DOMContentLoaded", function () {
     tampilkanMenu(makanan, "makanan");
   }
 
-  const minumanContainer = document.getElementById("minuman");
-  if (minumanContainer) {
-    tampilkanMenu(minuman, "minuman");
-  }
   updateKeranjangView();
 });
 
