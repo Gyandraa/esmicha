@@ -205,7 +205,7 @@ const minuman = [
   },
   {
     nama: "Es Teh Kecil Dan Besar",
-    harga: "Rp 3.000 - 4.000",
+    harga: "Rp 3.000 - 5.000",
     gambar: "images/esteh.jpg",
   },
   {
