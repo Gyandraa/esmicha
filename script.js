@@ -144,22 +144,22 @@ const minuman = [
   },
   {
     nama: "Es Mozito Cocopandan Kecil Dan Besar ",
-    harga: "Rp 7.000 - 10.000",
+    harga: "Rp 8.000 - 10.000",
     gambar: "images/esmozitostrawberry.jpg",
   },
   {
     nama: "Es Mozito melon Kecil Dan Besar",
-    harga: "Rp 7.000 - 10.000",
+    harga: "Rp 8.000 - 10.000",
     gambar: "images/esmozitomelon.jpg",
   },
   {
     nama: "Es Mozito Orange Kecil Dan Besar",
-    harga: "Rp 7.000 - 10.000",
+    harga: "Rp 8.000 - 10.000",
     gambar: "images/esmozitoorange.jpg",
   },
   {
     nama: "Es Mozito Strawberry Kecil Dan Besar",
-    harga: "Rp 7.000 - 10.000",
+    harga: "Rp 8.000 - 10.000",
     gambar: "images/esmozitostrawberry.jpg",
   },
   {
@@ -180,7 +180,7 @@ const minuman = [
   },
   {
     nama: "Es Susu Kecil Dan Besar",
-    harga: "Rp 7.000 - 10.000",
+    harga: "Rp 8.000 - 10.000",
     gambar: "images/essusu.jpg",
   },
   {
