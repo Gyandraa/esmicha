@@ -44,6 +44,16 @@ const makanan = [
     gambar: "images/nasiayamgoreng.jpg",
   },
   {
+    nama: "Nasi Lele Goreng ",
+    harga: "Rp 15.000",
+    gambar: "images/nasilele.jpeg",
+  },
+  {
+    nama: "Lele Goreng (Tanpa Nasi)",
+    harga: "Rp 10.000",
+    gambar: "images/leletanpanasi.jpeg",
+  },
+  {
     nama: "Paket Nasi Telur Dadar",
     harga: "Rp 10.000",
     gambar: "images/nasitelur.jpg",
@@ -253,11 +263,10 @@ function tampilkanMenu(menu, targetId) {
     div.innerHTML = `
       <img src="${item.gambar}" alt="${item.nama}" class="menu-gambar" />
       <div class="menu-info">
-        ${
-          item.keterangan
-            ? `<span class="keterangan">${item.keterangan}</span>`
-            : ""
-        }
+        ${item.keterangan
+        ? `<span class="keterangan">${item.keterangan}</span>`
+        : ""
+      }
         <h2>${item.nama}</h2>
         <h3>${item.harga}</h3>
         <button onclick="tambahKeKeranjang('${item.nama}', '${item.harga}')">
