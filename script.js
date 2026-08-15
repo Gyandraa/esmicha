@@ -13,6 +13,24 @@ const makanan = [
   },
   {
     keterangan: "🆕New Menu",
+    nama: "Nasi Ayam Balado ",
+    harga: "Rp 15.000",
+    gambar: "images/nasiayambalado.jpeg",
+  },
+  {
+    keterangan: "🆕New Menu",
+    nama: "Ayam Balado (Tanpa Nasi)",
+    harga: "Rp 10.000",
+    gambar: "images/ayam-balado.jpeg",
+  },
+  {
+    keterangan: "🆕New Menu",
+    nama: "Sate Ati Ampela - Sate Usus",
+    harga: "Rp 5.000 - 2.000",
+    gambar: "images/sate-usus.jpeg",
+  },
+  {
+    keterangan: "🆕New Menu",
     nama: "Nasi Ayam Penyet",
     harga: "Rp 17.500",
     gambar: "images/ayam-penyet.jpg",
