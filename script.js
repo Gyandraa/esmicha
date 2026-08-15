@@ -1,6 +1,18 @@
 const makanan = [
   {
     keterangan: "🆕New Menu",
+    nama: "Nasi Lele Goreng ",
+    harga: "Rp 15.000",
+    gambar: "images/nasilele.jpeg",
+  },
+  {
+    keterangan: "🆕New Menu",
+    nama: "Lele Goreng (Tanpa Nasi)",
+    harga: "Rp 10.000",
+    gambar: "images/leletanpanasi.jpeg",
+  },
+  {
+    keterangan: "🆕New Menu",
     nama: "Nasi Ayam Penyet",
     harga: "Rp 17.500",
     gambar: "images/ayam-penyet.jpg",
@@ -42,16 +54,6 @@ const makanan = [
     nama: "Ayam Goreng (Tanpa Nasi)",
     harga: "Rp 10.000",
     gambar: "images/nasiayamgoreng.jpg",
-  },
-  {
-    nama: "Nasi Lele Goreng ",
-    harga: "Rp 15.000",
-    gambar: "images/nasilele.jpeg",
-  },
-  {
-    nama: "Lele Goreng (Tanpa Nasi)",
-    harga: "Rp 10.000",
-    gambar: "images/leletanpanasi.jpeg",
   },
   {
     nama: "Paket Nasi Telur Dadar",
